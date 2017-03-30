@@ -29,7 +29,8 @@ function mapStateToProps(state, props) {
         calculatedValue2 : state.calculator.calculatedValue2,
         arithmeticOperator : state.calculator.arithmeticOperator,
         arithmeticInProgress : state.calculator.arithmeticInProgress,
-        screenHasArithmeticSymbol : state.calculator.screenHasArithmeticSymbol
+        screenHasArithmeticSymbol : state.calculator.screenHasArithmeticSymbol,
+        calculationComplete : state.calculator.calculationComplete
     }
 }
 function mapDispatchToProps(dispatch) {
