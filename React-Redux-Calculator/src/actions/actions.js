@@ -3,6 +3,7 @@ const NUMERICAL_VALUE2 = 'NUMERICAL_VALUE2'
 const ARITHMETIC_OPERATOR = 'ARITHMETIC_OPERATOR'
 const CLEAR_SCREEN = 'CLEAR_SCREEN'
 const DO_CALCULATION = 'DO_CALCULATION'
+const CONTINUE_CALCULATION = 'CONTINUE_CALCULATION'
 const UPDATE_BASE_NUMBER = 'UPDATE_BASE_NUMBER'
 const RESET = 'RESET'
 
@@ -36,7 +37,14 @@ export const calculate = (calculatedValue) => {
   return {
     type : DO_CALCULATION,
     screenValue : calculatedValue
+  }
+}
 
+export const continuedCalculation = (calculatedValue, operatorSymbol) => {
+  return {
+    type : CONTINUE_CALCULATION,
+    screenValue : operatorSymbol,
+    calculatedValue1 : calculatedValue
   }
 }
 
@@ -53,25 +61,3 @@ export const arithmetic = (operatorSymbol) => {
     screenValue : operatorSymbol
   }
 }
-
-
-//action - dispatch action to store
-// export function buttonPressed() {
-//   return dispatch => {
-//     dispatch(updateDisplay())
-//   }
-// }
-//
-// import * as types from './action-types';
-//
-// export const addPerson = (person) => {
-//   return {
-//     type: types.ADD_PERSON,
-//     person
-//   };
-// }
-
-
-
-
-// export default;

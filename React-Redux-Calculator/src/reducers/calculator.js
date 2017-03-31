@@ -34,7 +34,7 @@ export default (state = initialState, action) => {
     case 'UPDATE_BASE_NUMBER':
       return Object.assign({}, state, {
          calculatedValue1: parseFloat(action.screenValue),
-         calculatedValue2: null
+         calculatedValue2: null,
       })
     case 'DO_CALCULATION':
       return Object.assign({}, state, {
@@ -42,6 +42,14 @@ export default (state = initialState, action) => {
          arithmeticInProgress : true,
          calculationComplete : true,
          screenHasArithmeticSymbol : false
+      })
+    case 'CONTINUE_CALCULATION':
+      return Object.assign({}, state, {
+         screenValue : action.screenValue,
+         calculatedValue1: parseFloat(action.calculatedValue1),
+         calculatedValue2: null,
+         arithmeticOperator: action.screenValue,
+         screenHasArithmeticSymbol : true
       })
     case 'CLEAR_SCREEN':
       return Object.assign({}, state, {
