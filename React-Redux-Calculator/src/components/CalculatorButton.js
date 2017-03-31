@@ -3,7 +3,7 @@ import '../css/calculator.css';
 
 const CalculatorButton = (props) => {
   return (
-    <span className="calc__button" onClick={props.onClick}>
+    <span className={props.className} onClick={props.onClick}>
       {props.value}
     </span>
   )

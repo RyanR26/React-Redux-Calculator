@@ -49,10 +49,11 @@ class Screen extends Component {
 
   _handleOperatorInput(value) {
     if(!this.props.calculationComplete) {
-      if(this.props.arithmeticInProgress) {
+      if(this.props.arithmeticInProgress &&
+        !this.props.screenHasArithmeticSymbol) {
         this.ACTION.continuedCalculation(this._calculate(this.props.arithmeticOperator), value)
       } else {
-       this.ACTION.arithmetic(value)
+        this.ACTION.arithmetic(value)
       }
     } else {
        this.ACTION.baseNumber(this.props.screenValue)
@@ -94,6 +95,7 @@ class Screen extends Component {
                 key={index}
                 value={item.value}
                 name={item.name}
+                className={'calc__button ' + item.type + ' ' + item.name}
                 onClick={() => this._buttonPress(item.value, item.type )}
               />
     })

@@ -14,7 +14,7 @@ export const ACTIONS = {
 }
 
 export const UI_ELEMENTS_BUTTONS = [
-  {type : 'action', name : 'clear all', value : 'CA'},
+  {type : 'action', name : 'clear-all', value : 'CA'},
   {type : 'action', name : 'clear', value : 'C'},
   {type : 'numeric', name : 'seven', value : 7},
   {type : 'numeric', name : 'eight', value : 8},
