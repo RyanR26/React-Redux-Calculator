@@ -34,8 +34,7 @@ class Screen extends Component {
   _handleNumericInput(value) {
     if(this.props.arithmeticInProgress) {
       this.ACTION.number2(value)
-    }
-    if(!this.props.arithmeticInProgress) {
+    } else {
       if(this.props.screenValue == 0) {
         this.ACTION.clearScreen()
       }

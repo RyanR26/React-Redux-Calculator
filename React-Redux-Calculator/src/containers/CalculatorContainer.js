@@ -15,7 +15,7 @@ class CalculatorContainer extends Component {
 
   render() {
     return (
-        <Calculator/>
+      <Calculator/>
     )
   }
 }

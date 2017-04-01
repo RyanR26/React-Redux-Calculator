@@ -1,9 +1,9 @@
 
 const initialState = {
    screenValue : 0,
-   calculatedValue1 : null,
-   calculatedValue2 : null,
-   arithmeticOperator : null,
+   calculatedValue1 : 'NUM',
+   calculatedValue2 : 'NUM',
+   arithmeticOperator : 'OP',
    arithmeticInProgress : false,
    screenHasArithmeticSymbol : false,
    calculationComplete : false
