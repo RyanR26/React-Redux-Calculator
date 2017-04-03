@@ -27,12 +27,13 @@
   float: left;
   padding: 20px 0;
   color: white;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.15);
   outline: 1px solid black;
+  border: none;
+  font-size: 20px;
 }
 
 .calc__button:hover {
-  background: rgba(255,255,255,0.15);
   color: orange;
 }
 
@@ -67,7 +68,7 @@
 }
 
 .calc__screen--sub {
-  outline: 2px solid black;
+  outline: 1px solid black;
   width: 40%;
   height: 50px;
   line-height: 50px;
