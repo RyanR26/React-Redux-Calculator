@@ -33,16 +33,11 @@ class Calculator extends Component {
     let totalCalculatedNumber = this.calculate(operator).toString();
     if (totalCalculatedNumber.indexOf('.') > -1) {
       const decimal = totalCalculatedNumber.split('.')[1];
-      console.log('decimal', decimal);
       if (decimal.length > 5) {
-         totalCalculatedNumber = parseFloat(totalCalculatedNumber).toFixed(6).toString();
-         return totalCalculatedNumber;
-      } else {
-         return totalCalculatedNumber;
+        totalCalculatedNumber = parseFloat(totalCalculatedNumber).toFixed(6).toString();
       }
-    } else {
-      return totalCalculatedNumber;
     }
+    return totalCalculatedNumber;
   }
 
   handleNumericInput(value) {
